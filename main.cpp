@@ -28,11 +28,8 @@ extern vector<Node*>AllProcesses;
 vector<Node*>Queue;
 int N{0};//number of processes
 
-
-
 Node* AddProcess()
 {
-
     int id,arrival,burst,priority;
 
     cout<<"Enter process Id,Arrival time ,Burst time";
@@ -148,10 +145,8 @@ void OS_RunningProcceses(Node* head)
                 continue;
             }
             if(copyhead->BurstTime != 0 && copyhead->ResponseTime ==0 && copyhead != copyhead->Head)
-            {
                 copyhead->ResponseTime = copyhead->CurrentTime;
-                cout<<"Process = "<<copyhead->ProcessId<<" response time "<<copyhead->ResponseTime<<endl;
-            }
+
 
             for(int i = 0; i < copyhead->BurstTime ; i++)
             {
@@ -161,7 +156,6 @@ void OS_RunningProcceses(Node* head)
 
             if(copyhead->RemaningTime == 0 )
                 copyhead->ExitTime = copyhead->CurrentTime;
-
 
             copyhead = copyhead->NextNode;
         }
