@@ -26,9 +26,7 @@ extern vector<Node*>SRTFProcesses;//used for SRTF algorithm
 extern vector<Node*>AllProcesses;
 
 vector<Node*>Queue;
-int N{0};//number of processes size;
-
-
+int N{0};//number of processes
 
 
 
@@ -98,7 +96,7 @@ Node* AddProcess()
         cout<<":: Enter -1 to exit: ";
         cin>>id;
     }
-    if(TYPE == RR)
+    if(TYPE == RR && N!=0)
     {
         cout<<"Enter Quantum : ";
         cin>>Node::quantum;
@@ -109,7 +107,7 @@ Node* AddProcess()
 
 void OS_RunningProcceses(Node* head)
 {
-
+    if(head == nullptr)return;
     if(TYPE == FCFS || TYPE == PRIORITY_SCHEDULING || TYPE == SJF)
     {
         Node* copyhead = head;
@@ -151,17 +149,16 @@ void OS_RunningProcceses(Node* head)
             }
             if(copyhead->BurstTime != 0 && copyhead->ResponseTime ==0 && copyhead != copyhead->Head)
             {
-
-
                 copyhead->ResponseTime = copyhead->CurrentTime;
                 cout<<"Process = "<<copyhead->ProcessId<<" response time "<<copyhead->ResponseTime<<endl;
             }
+
             for(int i = 0; i < copyhead->BurstTime ; i++)
             {
-
                 cout<<"system time<"<<copyhead->CurrentTime++<<"> "<<"Process Id<"<<copyhead->ProcessId<<"> "<<"is running"<<endl;
                 copyhead->RemaningTime--;
             }
+
             if(copyhead->RemaningTime == 0 )
                 copyhead->ExitTime = copyhead->CurrentTime;
 
@@ -183,6 +180,7 @@ void OS_RunningProcceses(Node* head)
 
 void GetStatisticalInformation()
 {
+  if(N==0)return;
   double AverageResponseTime {0.0};
   double AverageWaitingTime {0.0};
   double AverageTurnaroundTime {0.0};
