@@ -1,5 +1,5 @@
-#ifndef _FCFS_H
-#define _FCFS_H
+#ifndef FCFS_H
+#define FCFS_H
 #include "Node.h"
 
 class Fcfs : public Scheduling
@@ -12,4 +12,4 @@ public:
 };
 
 
-#endif // _FCFS_H
+#endif // FCFS_H

@@ -1,6 +1,6 @@
-#ifndef _PRIORITYSCHEDULING_H_
+#ifndef PRIORITYSCHEDULING_H
 
-#define _PRIORITYSCHEDULING_H_
+#define PRIORITYSCHEDULING_H
 #include "Node.h"
 class PriorityScheduling : public Scheduling
 {
@@ -11,4 +11,4 @@ public:
 };
 
 
-#endif // _PRIORITYSCHEDULING_H_
+#endif // PRIORITYSCHEDULING_H

@@ -1,5 +1,5 @@
-#ifndef _SRTF_H_
-#define _SRTF_H_
+#ifndef SRTF_H
+#define SRTF_H
 #include "Node.h"
 class Srtf : public Scheduling
 {
@@ -10,4 +10,4 @@ public:
 };
 
 
-#endif // _SRTF_H_
+#endif // SRTF_H

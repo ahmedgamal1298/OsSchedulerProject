@@ -1,6 +1,6 @@
-#ifndef _SJF_H
+#ifndef SJF_H
 
-#define _SJF_H
+#define SJF_H
 #include "Node.h"
 class Sjf : public Scheduling
 {
@@ -14,4 +14,4 @@ public:
 
 
 
-#endif // _SJF_H
+#endif // SJF_H

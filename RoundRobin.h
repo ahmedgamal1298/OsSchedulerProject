@@ -1,6 +1,6 @@
-#ifndef _ROUNDROBIN_H_
+#ifndef ROUNDROBIN_H
 
-#define _ROUNDROBIN_
+#define ROUNDROBIN_H
 #include "Node.h"
 class RoundRobin : public Scheduling
 {
@@ -11,4 +11,4 @@ public:
 } ;
 
 
-#endif // _ROUNDROBIN_H_
+#endif // ROUNDROBIN_H
